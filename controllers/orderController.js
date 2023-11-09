@@ -134,3 +134,8 @@ exports.limitOrder = async (req, res) => {
     res.status(400).send("Processing failed");
   }
 };
+
+//TODO:Remove the userids from the orderbook before returning it
+exports.getOrderBook = (req, res) => {
+  res.status(202).send(OrderBook);
+};
